@@ -45,7 +45,7 @@ nav ul {
 nav ul li {
     margin-left: 60px;
     font-size: smaller; /* Add space between links */
-    font-family: Arial, sans-serif;
+    font-family: "Arial";
     font-weight: bold;
 }
 
