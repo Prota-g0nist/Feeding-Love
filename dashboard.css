@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+#dashboardh1{
+    text-align: center;
+    color: #4CAF50;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    
+}
+
+nav{
+    align-items: center;
+    justify-content: center;
+}
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card p, .card ul {
+    margin: 10px 0;
+}
+
+.card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.card ul li {
+    padding: 5px 0;
+}
+
+/* for header bar */
+
+#header {
+    display: flex;
+    align-items: center;   
+    padding: 50px 0px;
+}
+
+body {
+    background-color: #fbe4d8;
+    background-image: url("bg.png");
+    margin: 0px !important;
+    padding: 0px;
+    background-repeat: no-repeat;
+}
+
+.bg {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Adjust logo dimensions */
+#header img {
+    width: auto;
+    height: 70px;
+    padding: 20px;
+}
+.contact-us {
+    background-color: rgb(76, 175, 80);
+    color: white;
+    border: none;
+    height: 36px;
+    width: 150px;
+    border-radius: 18px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 90px;
+    margin-top: 10px;
+    transition: box-shadow 0.15s;
+    vertical-align: top;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(60, 136, 62);
+
+}
+
+.contact-us:hover {
+    background-color: rgb(47, 105, 49);
+}
+
+.Home {
+    background-image: url('Home.jpg');
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    height: 70vh; /* Full height of the viewport */
+    padding: 20px;
+}
+

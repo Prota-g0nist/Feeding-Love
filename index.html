@@ -21,6 +21,39 @@
                     <li><a href="#About_us">About Us</a></li>
                 </ul>
                 <a href="#contact-US"><button class="contact-us">Contact Us</button></a>
+                    <button id="show-login">Login</button>
+                  <div class="popup">
+                    <div class="close-btn">&times;</div>
+                    <div class="form">
+                      <h2>Log in</h2>
+                      <div class="form-element">
+                        <label for="Foodbank name">Foodbank name</label>
+                        <input type="text" id="email" placeholder="Enter Foodbank name">
+                      </div>
+                      <div class="form-element">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter password">
+                      </div>
+                      <div class="form-element">
+                        <input type="checkbox" id="remember-me">
+                        <label for="remember-me">Remember me</label>
+                      </div>
+                      <div class="form-element">
+                        <a href="dashboard.html"><button>Log in</button></a>
+                      </div>
+                      <div class="form-element">
+                        <a href="#">Forgot password?</a>
+                      </div>
+                    </div>
+                  </div>
+                  <script>
+                    document.querySelector("#show-login").addEventListener("click",function(){
+                    document.querySelector(".popup").classList.add("active");
+                    });
+                    document.querySelector(".popup .close-btn").addEventListener("click",function(){
+                    document.querySelector(".popup").classList.remove("active");
+                    });
+            </script>
             </nav>
         </div>
         <div style="padding-top:40px;padding-left:10px;padding-right:10px;">
