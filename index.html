@@ -6,22 +6,33 @@
     <link rel="shortcut icon" type="x-icon" href="logo.png">
     <title>Feeding With Love</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <section id="home">
         <div id="header">
-            <div id="logo">
-                <img id="logo" src="logo.png" alt="Logo">
-            </div>
             <nav>
+                <div id="line-m">
+                    <h1>Be Grateful <br></h1>
+                    <h1>Donate<br></h1>
+                    <h1>Food<br></h1>
+                    <h1>Give Food Save Lives</h1>
+                </div>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars" ></i>
+                </label>
+                <div id="logo">
+                    <img id="logo" src="logo.png" alt="Logo">
+                </div>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#foodbank_registration">Foodbank Registration</a></li>
                     <li><a href="#List_food_leftover">List food leftover</a></li>
                     <li><a href="#About_us">About Us</a></li>
-                </ul>
-                <a href="#contact-US"><button class="contact-us">Contact Us</button></a>
-                    <button id="show-login">Login</button>
+                    <li><a href="#contact-US"><button class="contact-us">Contact Us</button></a></li>
+                    <li><button id="show-login">Login</button></li>
                   <div class="popup">
                     <div class="close-btn">&times;</div>
                     <div class="form">
@@ -53,10 +64,11 @@
                     document.querySelector(".popup .close-btn").addEventListener("click",function(){
                     document.querySelector(".popup").classList.remove("active");
                     });
-            </script>
+            </script>   
+                </ul>
             </nav>
         </div>
-        <div style="padding-top:40px;padding-left:10px;padding-right:10px;">
+        <div  id="home-m"  style="padding-top:40px;padding-left:10px;padding-right:10px; z-index: -1;;">
             <div class="Home">
                 <div class="lines">
                     <h1>Be Grateful <br></h1>
@@ -235,15 +247,12 @@
             <div id="boxes">
             <div class="square5">
                 <div class="circle2">
-                    <i class="fa fa-file"></i>
                 </div>
                 <h3>Address:</h3>
                 <p>1073 w stephen ave, clawson</p>
             </div>
-
             <div class="square5">
                 <div class="circle2">
-                    <i class="fa fa-file"></i>
                 </div>
                 <h3>Call Us:</h3>
                 <p>+1 200-22-4444</p>
@@ -251,10 +260,9 @@
 
             <div class="square5">
                 <div class="circle2">
-                    <i class="fa fa-file"></i>
                 </div>
                 <h3>E-mail:</h3>
-                <p><e-mail> feeding_with_love@gmail.com </e-mail></p>
+                <p><e-mail> feedinglove@gmail.com </e-mail></p>
             </div>
         </div>
 

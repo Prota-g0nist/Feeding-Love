@@ -1,9 +1,3 @@
-/* Container for header elements */
-#header {
-    display: flex;
-    align-items: center;   
-    padding: 50px 0px;
-}
 
 body {
     background-color: #fbe4d8;
@@ -12,6 +6,7 @@ body {
     padding: 0px;
     background-repeat: no-repeat;
     font-family: Arial, sans-serif;
+    min-height: 100vh;
 
 }
 
@@ -21,38 +16,64 @@ body {
 }
 
 /* Adjust logo dimensions */
+
+#header {
+  display: flex;
+  align-items: center;   
+  padding: 50px 0px;
+}
 #header img {
     width: auto;
     height: 70px;
     padding: 20px;
 }
+.checkbtn{
+  font-size: 30px;
+  color: rgb(76, 175, 80);
+  float: right;
+  line-height: 150px;
+  margin-left: 50px;
+  margin-top: 40px;
+  padding-right: 830px;
+  cursor: pointer;
+  display: none;
+  line-height:  0;;
+}
+#check{
+  display: none;
 
+}
 nav {
     margin-top: 10px;
-    margin-left: 350px;
+    display: flex ;
+    width: auto;
+    z-index: 0;
 }
 
 nav ul {
     list-style: none;
-    display: flex; /* Display links in a row */
-    margin-left: 0;
     font-size: 24px;
     overflow: hidden;
-    float: left;
+    float: right;
+    padding-left: 100px;
 }
 
 /* Style navigation links */
 nav ul li {
-    margin-left: 60px;
+
     font-size: smaller; /* Add space between links */
     font-family: "Arial";
     font-weight: bold;
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 20px;
 }
 
 /* Remove underline from navigation links */
 nav ul li a {
     text-decoration: none;
     color: rgb(76, 175, 80);
+    
 }
 
 .contact-us {
@@ -64,13 +85,112 @@ nav ul li a {
     font-weight: bold;
     font-size: 15px;
     cursor: pointer;
-    margin-left: 90px;
-    margin-top: 20px;
     border-width: 3px;
     border-style: solid;
     border-color: rgb(60, 136, 62);
 
 }
+
+/* for the login popup*/
+#show-login{
+  background-color: rgb(76, 175, 80);
+  color: white;
+  border: none;
+  height: 36px;
+  width: 150px;
+  border-radius: 18px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgb(60, 136, 62); 
+}
+#show-login:hover {
+background-color: rgb(47, 105, 49);
+}
+.popup {
+position:absolute;
+top:-150%;
+left:50%;
+opacity:0;
+transform:translate(-50%,-50%) scale(1.25);
+width:380px;
+padding:20px 30px;
+background:#fff;
+box-shadow:2px 2px 5px 5px rgba(0,0,0,0.15);
+border-radius:10px;
+transition:top 0ms ease-in-out 200ms,
+           opacity 200ms ease-in-out 0ms,
+           transform 200ms ease-in-out 0ms; 
+}
+.popup.active {
+top:50%;
+opacity:1;
+transform:translate(-50%,-50%) scale(1);
+transition:top 0ms ease-in-out 0ms,
+           opacity 200ms ease-in-out 0ms,
+           transform 200ms ease-in-out 0ms;
+}
+.popup .close-btn {
+position:absolute;
+top:10px;
+right:10px;
+width:15px;
+height:15px;
+background:#888;
+color:#eee;
+text-align:center;
+line-height:15px;
+border-radius:15px;
+cursor:pointer;
+}
+.popup .form h2 {
+text-align:center;
+color:#222;
+margin:10px 0px 20px;
+font-size:25px;
+}
+.popup .form .form-element {
+margin:15px 0px;
+}
+.popup .form .form-element label {
+font-size:14px;
+color:#222;
+}
+.popup .form .form-element input[type="text"],
+.popup .form .form-element input[type="password"] {
+margin-top:5px;
+display:block;
+width:100%;
+padding:10px;
+outline:none;
+border:1px solid #aaa;
+border-radius:5px;
+}
+.popup .form .form-element input[type="checkbox"] {
+margin-right:5px;
+}
+.popup .form .form-element button {
+width:100%;
+height:40px;
+border:none;
+outline:none;
+font-size:16px;
+background:#222;
+color:#f5f5f5;
+border-radius:10px;
+cursor:pointer;
+}
+.popup .form .form-element a {
+display:block;
+text-align:right;
+font-size:15px;
+color:#1a79ca;
+text-decoration:none;
+font-weight:600;
+}
+
 
 .contact-us:hover {
     background-color: rgb(47, 105, 49);
@@ -84,6 +204,7 @@ nav ul li a {
     background-position: center;
     height: 70vh; /* Full height of the viewport */
     padding: 20px;
+    padding-bottom: 120px;
 }
 
 .donate {
@@ -106,6 +227,11 @@ nav ul li a {
     opacity: 0.8;
 }
 
+#line-m{
+  display: none;
+  z-index: -1;
+  position: absolute;
+}
 .lines {
     margin-left: 250px;
     margin-top: 60px;
@@ -129,10 +255,7 @@ nav ul li a {
     display: flex;
     height: 250vh;
     align-items: center;
-    padding: 10px;
-    background-image: url("bg.png");
-    background-repeat: no-repeat;
-    
+    padding: 10px;   
 }
 
 #foodbankinfo, #Personinof, #Services, #Logistics, #leftoverinfo{
@@ -149,13 +272,14 @@ nav ul li a {
 
 .container {
     max-width: 800px;
-    width: 100%;
+    width: 80%;
     background-color: rgb(76, 175, 80);
     padding: 50px 30px;
     margin: 40px;
     border-radius: 15px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
     font-family: "Arial";
+    
 }
 
 form {
@@ -163,6 +287,11 @@ form {
     flex-direction: column;
     align-items: center;
 }
+::placeholder {
+  color: black;
+  opacity: 1; 
+}
+
 
 form .button {
     height: 45px;
@@ -326,6 +455,7 @@ form .button input:hover {
 }
 
 
+
 /* About Us section styling */
 .about-us {
     text-align: center;
@@ -339,8 +469,8 @@ form .button input:hover {
 }
 
 .about-us h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+  font-size: 2.5em;
+  margin-bottom: 20px;
 }
 
 .about-us .content {
@@ -522,7 +652,11 @@ form .button input:hover {
   margin-bottom: 5px;
 }
 
-/* If you don't want the footer to be responsive, remove these media queries */
+
+
+
+
+
 
 @media (max-width: 880px) {
 
@@ -535,111 +669,58 @@ form .button input:hover {
   .footer-distributed .footer-right{
     display: block;
 }
+.checkbtn{
+  display: block;
+  display: flex;
 }
-::placeholder {
-  color: black;
-  opacity: 1; 
+ul{
+  position:relative;
+ padding-right: 875px;
+  height: auto;
+  top: 80px;
+  left: -100%;
+  text-align: center;
+  transition: all .5s;
+  background-color: #414040;
+}
+nav ul li{
+  display: block;
 }
 
+#check:checked ~ ul{
+  left: 0;
+}
+nav{
+  display: inline;
+  background-image: url("Home.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-position: 0% 70%;
+}
+#line-m{
+  display:block;
+  color: rgb(76, 175, 80);
+  padding-top: 310px;
+  padding-left: 70px;
+  font-size: 26px;
+}
+#header img{
+  width: 150px;
+}
+#logo{
+  width: 200px;
+}
 
-/* for the login popup*/
-#show-login{
-    background-color: rgb(76, 175, 80);
-    color: white;
-    border: none;
-    height: 36px;
-    width: 150px;
-    border-radius: 18px;
-    font-weight: bold;
-    font-size: 15px;
-    cursor: pointer;
-    margin-left: 60px;
-    margin-top: 20px;
-    border-width: 3px;
-    border-style: solid;
-    border-color: rgb(60, 136, 62); 
+#home-m{
+  display: none;
 }
-#show-login:hover {
-  background-color: rgb(47, 105, 49);
+#foodbank_registration
+{
+    justify-content: center;
+    display: flex;
+    height: 370vh;
+    align-items: center;
+    padding: 10px;   
 }
-.popup {
-  position:absolute;
-  top:-150%;
-  left:50%;
-  opacity:0;
-  transform:translate(-50%,-50%) scale(1.25);
-  width:380px;
-  padding:20px 30px;
-  background:#fff;
-  box-shadow:2px 2px 5px 5px rgba(0,0,0,0.15);
-  border-radius:10px;
-  transition:top 0ms ease-in-out 200ms,
-             opacity 200ms ease-in-out 0ms,
-             transform 200ms ease-in-out 0ms; 
 }
-.popup.active {
-  top:50%;
-  opacity:1;
-  transform:translate(-50%,-50%) scale(1);
-  transition:top 0ms ease-in-out 0ms,
-             opacity 200ms ease-in-out 0ms,
-             transform 200ms ease-in-out 0ms;
-}
-.popup .close-btn {
-  position:absolute;
-  top:10px;
-  right:10px;
-  width:15px;
-  height:15px;
-  background:#888;
-  color:#eee;
-  text-align:center;
-  line-height:15px;
-  border-radius:15px;
-  cursor:pointer;
-}
-.popup .form h2 {
-  text-align:center;
-  color:#222;
-  margin:10px 0px 20px;
-  font-size:25px;
-}
-.popup .form .form-element {
-  margin:15px 0px;
-}
-.popup .form .form-element label {
-  font-size:14px;
-  color:#222;
-}
-.popup .form .form-element input[type="text"],
-.popup .form .form-element input[type="password"] {
-  margin-top:5px;
-  display:block;
-  width:100%;
-  padding:10px;
-  outline:none;
-  border:1px solid #aaa;
-  border-radius:5px;
-}
-.popup .form .form-element input[type="checkbox"] {
-  margin-right:5px;
-}
-.popup .form .form-element button {
-  width:100%;
-  height:40px;
-  border:none;
-  outline:none;
-  font-size:16px;
-  background:#222;
-  color:#f5f5f5;
-  border-radius:10px;
-  cursor:pointer;
-}
-.popup .form .form-element a {
-  display:block;
-  text-align:right;
-  font-size:15px;
-  color:#1a79ca;
-  text-decoration:none;
-  font-weight:600;
-}
+ 
