@@ -722,5 +722,11 @@ nav{
     align-items: center;
     padding: 10px;   
 }
+#leftoverinfo, #about-us {
+    max-width: 290px;
+}
+#contactus1{
+  max-width: 330px;
+}
 }
  
